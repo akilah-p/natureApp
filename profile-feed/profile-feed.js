@@ -4,9 +4,10 @@ import { renderPost } from '../render-utils.js';
 
 const postSectionsEl = document.getElementById('posts-section');
 const avatarImgEl = document.querySelector('#avatar-img');
-const usernameHeaderEl = document.querySelector('.username-header');
-const headlineHeaderEl = document.querySelector('.headline-header');
-const profileLikesEl = document.querySelector('#profile-likes');
+const usernameHeaderEl = document.querySelector('#username-header');
+const headlineHeaderEl = document.querySelector('#headline-header');
+const profileLikesEl = document.querySelector('.profile-likes');
+
 
 
 
@@ -34,10 +35,12 @@ window.addEventListener('load', async () => {
 async function displayProfile() {
     const profile = await getProfileById(id);
 
+
     avatarImgEl.src = profile.avatar_url;
     usernameHeaderEl.textContent = profile.username;
     headlineHeaderEl.textContent = profile.headline;
     profileLikesEl.textContent = '';
+
 
     const buttonLikes = renderLikes(profile);
     profileLikesEl.append(buttonLikes);

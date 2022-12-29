@@ -49,7 +49,7 @@ export function renderPost(postObject, profile) {
     const img = document.createElement('img');
     const h2 = document.createElement('h2');
     const p1 = document.createElement('p');
-    const div2 = document.createElement('div');
+
     const deleteButton = document.createElement('button');
     if (postObject.profile_id === profile.data.id) {
         deleteButton.classList.add('delete-button');
@@ -59,7 +59,6 @@ export function renderPost(postObject, profile) {
 
     div.classList.add('post-list');
     img.classList.add('naturepic');
-    div2.classList.add('info-card');
     h2.classList.add('location');
     p1.classList.add('description');
 
@@ -85,8 +84,8 @@ export function renderPost(postObject, profile) {
         }
     });
 
-    div2.prepend(h2, p1);
-    div.append(img, div2, deleteButton);
+
+    div.append(img, h2, p1, deleteButton);
     return div;
 }
 
