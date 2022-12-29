@@ -29,13 +29,13 @@
     <!-- add link for page specific css -->
 </head>
 
-<body>
+<body class="hovertext">
     <header class="page-header">
         <!-- Add a span and render specific user's profile name -->
-        <p class="title" style="color: white">Create your post!</p>
+        <p class="title" style="color: white">Create your post <span class="logged-in-user"></span></p>
 
         <nav class="left-nav">
-            <a title=(nativeLand)" class="title" style="color: white" id="native-land"
+            <a title='Native-Land.Ca Website' class="title" style="color: white" id="native-land"
                 href="https://www.Native-Land.ca/"> Native-Land.Ca
             </a>
 
@@ -51,7 +51,7 @@
 
         <form id="create-post-form">
 
-            <div class="image-info" class="create-post">
+            <div class="image-info">
 
 
                 <input required type="file" name="nature" placeholder="upload an image" />
@@ -65,25 +65,29 @@
 
                         <label>
                             Alt Text
-                        </label>
-                        <textarea required name="alt-text" id="alt-text" placeholder="add alternative text"></textarea>
+                            <textarea required name="alt-text" id="alt-text"
+                                placeholder="add alternative text"></textarea>
                     </li>
+                    </label>
 
                     <li>
                         <label>
                             Location
-                        </label>
-                        <textarea title=(location)" name="location" required placeholder="Add the location">
+                            <textarea required name="location"
+                                placeholder="Where was this taken? What land is this on?">
                             </textarea>
                     </li>
+                    </label>
 
                     <li>
-                        <label> Description</label>
+                        <label> Description
 
-                        <textarea required name="description" id="description"
-                            placeholder="Add a description"></textarea>
+
+                            <textarea required name="description" id="description"
+                                placeholder="Add a description"></textarea>
 
                     </li>
+                    </label>
 
                     <li>
 
