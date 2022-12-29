@@ -6,7 +6,7 @@ const postSectionsEl = document.getElementById('posts-section');
 const avatarImgEl = document.querySelector('#avatar-img');
 const usernameHeaderEl = document.querySelector('#username-header');
 const headlineHeaderEl = document.querySelector('#headline-header');
-const profileLikesEl = document.querySelector('#profile-likes');
+const profileLikesEl = document.querySelector('.profile-likes');
 
 
 
@@ -65,14 +65,14 @@ export async function displayPosts() {
 
 function renderLikes({ likes, id }) {
     const likeButton = document.createElement('button');
+    const div = document.createElement('div');
 
 
-
-
+    div.classList.add('profile-likes');
     likeButton.classList.add('like-button');
-    likeButton.textContent = `${likes}🍃`;
+    likeButton.textContent = `Likes ${likes}🍃`;
 
-
+    div.append(likeButton);
 
 
 
@@ -81,7 +81,7 @@ function renderLikes({ likes, id }) {
         await displayProfile();
     });
 
-    return likeButton;
+    return div;
 }
 
 export function renderImageNav() {
