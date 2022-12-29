@@ -10,15 +10,13 @@ export function renderProfile(profile) {
     // avatar
     const img2 = document.createElement('img');
     // username
-    const h2 = document.createElement('h2');
     const p = document.createElement('p');
 
     // class lists
     a.classList.add('profile-container');
     img.classList.add('polaroid');
     img2.classList.add('avatar');
-    h2.classList.add('username');
-    p.classList.add('headline');
+    p.classList.add('username');
 
     // images
     // polaroid photo
@@ -30,26 +28,21 @@ export function renderProfile(profile) {
     img2.alt = 'avatar';
 
     // text content
-    h2.textContent = `${profile.username}`;
-    p.textContent = `${profile.headline}`;
+    p.textContent = `${profile.username}`;
     a.href = `../profile-feed/?id=${profile.id}`;
 
     // append
-    a.append(img2, h2, p);
+    a.append(img2, p);
 
     // return
     return a;
 }
 
-
-
-
 export function renderPost(postObject, profile) {
     const div = document.createElement('div');
     const img = document.createElement('img');
-    const h2 = document.createElement('h2');
+    const p = document.createElement('p');
     const p1 = document.createElement('p');
-
     const deleteButton = document.createElement('button');
     if (postObject.profile_id === profile.data.id) {
         deleteButton.classList.add('delete-button');
@@ -58,13 +51,13 @@ export function renderPost(postObject, profile) {
     }
 
     div.classList.add('post-list');
-    img.classList.add('pictures');
-    h2.classList.add('location');
+    img.classList.add('naturepic');
+    p.classList.add('location');
     p1.classList.add('description');
 
-    img.src = postObject.pictures_url;
+    img.src = postObject.naturepic_url;
     img.alt = '';
-    h2.textContent = postObject.location;
+    p.textContent = postObject.location;
     p1.textContent = postObject.description;
     deleteButton.textContent = 'Delete Post';
 
@@ -84,8 +77,6 @@ export function renderPost(postObject, profile) {
         }
     });
 
-
-    div.append(img, h2, p1, deleteButton);
+    div.append(img, p, p1, deleteButton);
     return div;
 }
-

@@ -1,6 +1,6 @@
 // import
 
-import { checkAuth, getProfile, getUser, uploadPicture, upsertPost } from '../fetch-utils.js';
+import { checkAuth, getProfile, getUser, uploadNaturePic, upsertPost } from '../fetch-utils.js';
 // this will check if we have a user and set signout link if it exists
 import '../auth/user.js';
 
@@ -13,7 +13,7 @@ const natureInput = postForm.querySelector('[name=nature]');
 const altTextInput = postForm.querySelector('[name=alt-text]');
 const locationInput = postForm.querySelector('[name=location]');
 const descriptionInput = postForm.querySelector('[name=description]');
-
+const signOutLink = document.getElementById('sign-out-link');
 checkAuth();
 // events
 let error = null;
@@ -61,9 +61,9 @@ postForm.addEventListener('submit', async (e) => {
 
     if (imageFile.size) {
         const imagePath = `${user.id}/${imageFile.name}`;
-        const url = await uploadPicture(imagePath, imageFile);
+        const url = await uploadNaturePic(imagePath, imageFile);
 
-        postObj.pictures_url = url;
+        postObj.naturepic_url = url;
     }
 
     // upsert

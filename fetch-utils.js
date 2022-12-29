@@ -74,7 +74,7 @@ export async function uploadImage(imagePath, imageFile) {
 
 // upload nature pics to Supabase
 export async function uploadPicture(imagePath, imageFile) {
-    const bucket = client.storage.from('pictures');
+    const bucket = client.storage.from('naturepics');
     const response = await bucket.upload(imagePath, imageFile, {
         cacheControl: '3600',
         upsert: true,
