@@ -45,7 +45,7 @@ form.addEventListener('submit', async (e) => {
     displayProfiles(profiles.data);
 });
 
-// profileFeed.addEventListener('click', async () => {
-//     const id = await getProfile(user.id);
-//     window.location.assign(`../profile-feed/?id=${id.data.id}`);
-// });
+profileFeed.addEventListener('click', async () => {
+    const id = await getProfile(user.id);
+    window.location.assign(`../profile-feed/?id=${id.data.id}`);
+});
