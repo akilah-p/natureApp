@@ -32,37 +32,14 @@
 }
 
 
-/* form:not(.inline) {
-    width: 100%;
-    margin: 10% auto;
-    max-width: 500px;
-    background: none;
-    padding: 20px 40px 56px;
-    display: grid;
-    gap: 16px;
-    border-radius: 4px;
-} */
 
-#create-post-form {
-    justify-content: center;
-    align-items: center;
-
+main {
+    height: 100%;
 }
 
-.row {
-    display: flex;
-    margin-left: -5px;
-    margin-right: -5px;
-    border-collapse: collapse;
-    align-items: center;
 
-    border: 1px solid #46a54e;
-
-    justify-content: center;
-    align-content: center;
-    margin-left: 20%;
-    border-radius: 10%;
-
+form {
+    display: flex !important;
 }
 
 #create-post-form {
@@ -95,17 +72,9 @@ section h2 {
 
 }
 
-label {
-    font-size: 0.9em;
-    font-weight: bolder;
-    color: var(--label-color);
 
 
-    display: grid;
-    gap: 5px;
-}
-
-form input,
+input,
 form textarea,
 form select,
 form button {
@@ -135,7 +104,7 @@ input[type='file'] {
 
 
 
-input form select:invalid,
+form select:invalid,
 form *::placeholder {
     color: var(--placeholder-color);
 }
@@ -171,7 +140,7 @@ textarea {
 }
 
 
-section button {
+form button {
 
     font-size: 18px;
     color: rgb(255, 255, 255);
@@ -192,7 +161,7 @@ form button:hover {
     font-weight: bolder;
 }
 
-#preview {
+/* #preview {
     height: 500px;
     object-fit: fill;
     max-width: 100%;
@@ -201,4 +170,4 @@ form button:hover {
     box-shadow: 10px 10px 8px 7px #000000bf;
     border-radius: 20%;
     z-index: -1;
-}
+} */
