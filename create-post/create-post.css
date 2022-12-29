@@ -82,7 +82,7 @@ form button {
     font-size: 1.15em;
     padding: 8px 16px;
     border-radius: 4px;
-    border: 1px solid grey;
+
     background: none;
 }
 
@@ -160,14 +160,3 @@ form button:hover {
     font-size: 20px;
     font-weight: bolder;
 }
-
-/* #preview {
-    height: 500px;
-    object-fit: fill;
-    max-width: 100%;
-    max-height: 100%;
-    opacity: 1;
-    box-shadow: 10px 10px 8px 7px #000000bf;
-    border-radius: 20%;
-    z-index: -1;
-} */
