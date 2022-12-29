@@ -56,17 +56,19 @@ form {
     display: flex !important;
 }
 
-.create-post {
+#create-post-form {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
+    width: 700px;
     height: 500px;
 
     box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
     overflow: hidden;
 }
+
+
 
 
 
