@@ -58,11 +58,11 @@ export function renderPost(postObject, profile) {
     }
 
     div.classList.add('post-list');
-    img.classList.add('naturepic');
+    img.classList.add('pictures');
     h2.classList.add('location');
     p1.classList.add('description');
 
-    img.src = postObject.naturepic_url;
+    img.src = postObject.pictures_url;
     img.alt = '';
     h2.textContent = postObject.location;
     p1.textContent = postObject.description;

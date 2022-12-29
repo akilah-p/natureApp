@@ -41,7 +41,7 @@ window.addEventListener('load', async () => {
             }
         }
     }
-    profileForm.reset();
+    // profileForm.reset();
 });
 
 // profile form submit button event listener
